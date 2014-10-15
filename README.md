@@ -13,7 +13,7 @@ Visit [https://assembly.com](https://assembly.com) to learn more.
 Current Stack:
 
 Ruby version 2.1.2
-Rails version 4.2.0.beta2
+Rails version 4.1.6
 
 Authentication:
 Devise
