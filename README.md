@@ -13,7 +13,7 @@ Visit [https://assembly.com](https://assembly.com) to learn more.
 Current Stack:
 
 Ruby version 2.1.2
-Rails version 4.1.5
+Rails version 4.2.0.beta2
 
 Authentication:
 Devise
@@ -22,15 +22,15 @@ Devise
 Database:
 PostgreSQL across the board
 
-Testing
+Testing:
 RSpec & Capybara
 
-Server
+Server:
 Puma
 
-CSS framework
+CSS framework:
 Bootstrap 3
 Bootstrap SASS
 
-JS Framework
+JS Framework:
 None
