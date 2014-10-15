@@ -10,27 +10,25 @@ Assembly products are like open-source and made with contributions from the comm
 
 Visit [https://assembly.com](https://assembly.com) to learn more.
 
-Current Stack:
+####Tech Stack:
+- Ruby version 2.1.2
+- Rails version 4.1.6
 
-Ruby version 2.1.2
-Rails version 4.1.6
+- Authentication:
+  - Devise
 
-Authentication:
-Devise
+- Database:
+  - PostgreSQL
+
+- Testing:
+  - RSpec
+  - Capybara
+
+- Server:
+  - Puma
+
+- CSS framework:
+  - Bootstrap 3
+  - Bootstrap SASS
 
 
-Database:
-PostgreSQL across the board
-
-Testing:
-RSpec & Capybara
-
-Server:
-Puma
-
-CSS framework:
-Bootstrap 3
-Bootstrap SASS
-
-JS Framework:
-None
