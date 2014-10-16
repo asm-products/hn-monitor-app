@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1939478533">
+    <data-source source="LOCAL" name="Rails hn-monitor-app: development" uuid="40334cf3-5630-4da4-b414-5e3bbc10fde9">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:hn-monitor-dev</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails hn-monitor-app: test" uuid="5de41f86-e2f2-45bc-b5ed-3be68aa59945">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:hn-monitor-test</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
