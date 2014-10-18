@@ -14,6 +14,10 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sidekiq'
 
+gem 'whenever', require: false
+
+gem 'hackernews_ruby'
+
 # Authentication
 gem 'devise'
 
