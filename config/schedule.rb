@@ -20,5 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 every 10.minutes do
-  runner "ApiMonitor.fetch_stories"
+  # We will end up making the environment key point to an ENV variable to
+  # distinguish development and prod.
+  runner "ApiMonitor.fetch_stories", environment: "development", output: nil
 end
