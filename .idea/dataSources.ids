@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails hn-monitor-app: development" uuid="40334cf3-5630-4da4-b414-5e3bbc10fde9">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source source="LOCAL" name="Rails hn-monitor-app: test" uuid="5de41f86-e2f2-45bc-b5ed-3be68aa59945">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-</component>
