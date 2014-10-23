@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20141021122554) do
     t.string   "title"
     t.string   "content"
     t.string   "link"
+
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "triggers", force: true do |t|
@@ -46,7 +49,6 @@ ActiveRecord::Schema.define(version: 20141021122554) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
