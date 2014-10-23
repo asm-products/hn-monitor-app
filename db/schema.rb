@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20141021122554) do
     t.integer "trigger_id"
   end
 
+  add_index "user_triggers", ["trigger_id", "user_id"], name: "index_user_triggers_on_trigger_id_and_user_id", using: :btree
+  add_index "user_triggers", ["user_id", "trigger_id"], name: "index_user_triggers_on_user_id_and_trigger_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
