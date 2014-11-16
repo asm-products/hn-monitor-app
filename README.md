@@ -10,6 +10,18 @@ Assembly products are like open-source and made with contributions from the comm
 
 Visit [https://assembly.com](https://assembly.com) to learn more.
 
+####Development
+You need to have [Docker](https://www.docker.com/) and [Fig](http://www.fig.sh/) installed.
+
+Prepare environment:
+1. Build image: `fig build` (done only once, image rebuilding also needed if you need to update system packages or your Gemfile changed.
+2. Initialize database: `fig run web bundle exec rake db:create db:migrate`
+
+To start env: `fig up` <- this will run rails on 3000 port and postgres.
+If you on Mac then you application port will be bind to VirtualBox IP, you can find get it here: `boot2docker ip`.
+
+To run rake/rails tasks: `fin run web bundle exec rails g contoller Main` or `fig run web bundle exec rake routes`
+
 ####Tech Stack:
 - Ruby version 2.1.2
 - Rails version 4.1.6

@@ -1,5 +1,7 @@
 default: &default
+  host: <%= ENV['POSTGRES_1_PORT_5432_TCP_ADDR'] %>
   adapter: postgresql
+  user: postgres
   encoding: unicode
   pool: 5
 
