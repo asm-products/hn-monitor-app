@@ -10,6 +10,16 @@ Assembly products are like open-source and made with contributions from the comm
 
 Visit [https://assembly.com](https://assembly.com) to learn more.
 
+####Development
+We provide docker image and http://www.fig.sh/ configuration that automatically starts your development environment (including database).
+
+Prepare environment:
+1. Build image: `fig build` (done only once, image rebuilding also needed if you need to update system packages or your Gemfile changed.
+2. Initialize database: `fig run web bundle exec rake db:create db:migrate`
+
+To start env: `fig up` <- this will run rails on 3000 port and postgres.
+To run rake/rails tasks: `fin run web bundle exec rails g contoller Main` or `fig run web bundle exec rake routes`
+
 ####Tech Stack:
 - Ruby version 2.1.2
 - Rails version 4.1.6
