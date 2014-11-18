@@ -2,16 +2,18 @@
 <div class="page-header">
   <h1><span class="glyphicon glyphicon-flash">   </span>Alerts</h1>
 </div>
+ 
 <!-- Keyword Alerts -->
 <div class="form-group">
+
   <h3>Keyword Alerts</h3>
     <p>Receive notifications whenever any of the following terms appears in any HN post or comment </p>
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <input type="text" placeholder="Enter a keyword" class="form-control">
-        <span class="input-group-btn">
-          <button class="btn btn-default AddAlert" type="button">Add</button>
+        <input type="text" class="form-control" id="TokenKeywords" value="open source,coinbase,Assembly" placeholder="Type a keyword and hit enter" />
+         <span class="input-group-btn">
+          <button class="btn btn-default AddKeywordAlert" type="button">Add</button>
         </span>
       </div>
     </div>
@@ -22,13 +24,13 @@
 <!-- URL Alerts -->
 <div class="form-group">
   <h3>URL Alerts</h3>
-    <p>Receive notifications whenever people terms appears in any HN post or comment </p>
+    <p>Receive notifications whenever people link to any of the following </p>
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <input type="text" placeholder="Enter a keyword" class="form-control">
-        <span class="input-group-btn">
-          <button class="btn btn-default AddAlert" type="button">Add</button>
+        <input type="text" class="form-control" id="TokenURLs" value="coinbase.com,Assembly.com" placeholder="Type a URL and hit enter" />
+          <span class="input-group-btn">
+          <button class="btn btn-default AddURLAlert" type="button">Add</button>
         </span>
       </div>
     </div>
@@ -94,7 +96,7 @@
   <div class="form-group">
    <%= f.label :email ,:class=>"col-sm-2 control-label"%>
     <div class="col-xs-4">
-      <%= f.email_field :email,:class=>"form-control",:placeholder=>"email" ,autofocus: true %>
+      <%= f.email_field :email,:class=>"form-control",:placeholder=>"email"  %>
     </div>
   </div> 
 
@@ -123,7 +125,7 @@
     </div>
   </div>
 
-  <div><%= f.submit "Update" %></div>
+  <div><%= f.submit "Update",:class=>"btn btn-success" %></div>
 <% end %>
 
 <!--Cancel my account -->
@@ -135,3 +137,4 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" },:class=>"btn btn-danger", method: :delete %></p>
 
 <%= link_to "Back", :back %>
+ 

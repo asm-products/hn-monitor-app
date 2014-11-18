@@ -8,8 +8,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'sass-rails', '>= 3.2'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0.2'
+gem 'rails-assets-bootstrap-tokenfield'
+gem 'rails-assets-typeahead.js'
+gem 'showdown-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'autoprefixer-rails'
@@ -21,6 +24,8 @@ gem 'devise'
 
 # Server
 gem 'puma'
+
+
 
 group :development, :test do
   gem 'byebug'
