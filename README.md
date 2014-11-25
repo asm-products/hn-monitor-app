@@ -20,7 +20,7 @@ Prepare environment:
 To start env: `fig up` <- this will run rails on 3000 port and postgres.
 If you on Mac then you application port will be bind to VirtualBox IP, you can find get it here: `boot2docker ip`.
 
-To run rake/rails tasks: `fin run web bundle exec rails g contoller Main` or `fig run web bundle exec rake routes`
+To run rake/rails tasks: `fig run web bundle exec rails g contoller Main` or `fig run web bundle exec rake routes`
 
 ####Tech Stack:
 - Ruby version 2.1.2
