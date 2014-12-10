@@ -1,5 +1,8 @@
 # HN Monitor
 
+<a href="https://assembly.com/hn-monitor/bounties"><img src="https://asm-badger.herokuapp.com/hn-monitor/badges/tasks.svg" height="24px" alt="Open Tasks" /></a>
+
+
 ## Receive alerts on keywords and domains on Hacker News
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting [https://assembly.com/hn-monitor](https://assembly.com/hn-monitor).
