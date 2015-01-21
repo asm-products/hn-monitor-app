@@ -47,6 +47,7 @@ GEM
       xpath (~> 2.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chronic (0.10.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -72,6 +73,16 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
+    hackernews_ruby (0.0.5)
+      activesupport
+      faraday_middleware
+      hashie
+      multi_json
+    hashie (3.3.1)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.2)
@@ -89,6 +100,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -191,6 +203,8 @@ GEM
       activemodel (~> 4.0)
       railties (~> 4.0)
       sprockets-rails (~> 2.0)
+    whenever (0.9.3)
+      chronic (>= 0.6.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -205,6 +219,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails
+  hackernews_ruby
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails (~> 5.0.2)
@@ -223,3 +238,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console
+  whenever

@@ -19,6 +19,10 @@ gem 'autoprefixer-rails'
 
 gem 'sidekiq'
 
+gem 'whenever', require: false
+
+gem 'hackernews_ruby'
+
 # Authentication
 gem 'devise'
 
@@ -37,6 +41,7 @@ group :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'shoulda-matchers', require: false
 end
 
 group :production do
