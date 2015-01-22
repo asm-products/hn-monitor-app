@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 ruby '2.1.5'
 gem 'rails', '4.1.6'
 gem 'pg'
