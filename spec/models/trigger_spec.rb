@@ -22,13 +22,13 @@ describe Trigger do
     it { expect(Trigger.count).to eq 3 }
 
     describe 'domain' do
-      it { expect(Trigger.domain.first).to eq @domain }
+      it { expect(Trigger.domains.first).to eq @domain }
     end
     describe 'keyword' do
-      it { expect(Trigger.keyword.first).to eq @keyword }
+      it { expect(Trigger.keywords.first).to eq @keyword }
     end
     describe 'username' do
-      it { expect(Trigger.username.first).to eq @user }
+      it { expect(Trigger.usernames.first).to eq @user }
     end
   end
 

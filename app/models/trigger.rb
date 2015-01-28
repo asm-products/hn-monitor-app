@@ -12,9 +12,9 @@ class Trigger < ActiveRecord::Base
   VALID_TYPES = ['domain', 'keyword', 'username']
 
 
-  scope :username, -> { where(trigger_type: 'username') }
-  scope :keyword, -> { where(trigger_type: 'keyword') }
-  scope :domain, -> { where(trigger_type: 'domain')}
+  scope :usernames, -> { where(trigger_type: 'username') }
+  scope :keywords, -> { where(trigger_type: 'keyword') }
+  scope :domains, -> { where(trigger_type: 'domain')}
 
   def must_be_valid_type
     unless VALID_TYPES.include?(self.trigger_type)
