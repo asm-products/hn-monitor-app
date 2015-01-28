@@ -3,6 +3,9 @@ class Trigger < ActiveRecord::Base
   validate 'must_be_valid_type'
   validates_uniqueness_of :word, scope: :trigger_type
 
+  has_many :story_triggers
+  has_many :stories, through: :story_triggers
+
   has_many :user_triggers
   has_many :users, through: :user_triggers
 
