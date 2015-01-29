@@ -11,4 +11,25 @@ describe Trigger do
       expect(Trigger.count).to eq 0
     end
   end
+
+  describe 'scopes' do
+    before(:each) do
+      @domain = FactoryGirl.create :domain_trigger
+      @keyword = FactoryGirl.create :keyword_trigger
+      @user = FactoryGirl.create :username_trigger
+    end
+
+    it { expect(Trigger.count).to eq 3 }
+
+    describe 'domain' do
+      it { expect(Trigger.domains.first).to eq @domain }
+    end
+    describe 'keyword' do
+      it { expect(Trigger.keywords.first).to eq @keyword }
+    end
+    describe 'username' do
+      it { expect(Trigger.usernames.first).to eq @user }
+    end
+  end
+
 end

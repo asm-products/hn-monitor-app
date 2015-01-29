@@ -1,0 +1,17 @@
+postgres:
+  image: postgres:9.3
+  ports:
+    - "5432"
+
+web:
+  build: .
+  command: bundle exec rails s puma
+  environment:
+    - RAILS_ENV=development
+  volumes:
+    - .:/usr/src/app
+  ports:
+    - "3000:3000"
+  links:
+    - postgres
+

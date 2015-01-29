@@ -11,16 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021122554) do
+ActiveRecord::Schema.define(version: 20150128183742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "stories", force: true do |t|
     t.string   "title"
-    t.string   "content"
     t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "hn_id"
+    t.string   "hn_user"
+  end
 
+  create_table "story_triggers", force: true do |t|
+    t.integer  "story_id"
+    t.integer  "trigger_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,8 +58,12 @@ ActiveRecord::Schema.define(version: 20141021122554) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "hn_username"
+    t.integer  "email_frequency",        default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email_frequency"], name: "index_users_on_email_frequency", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
 end
