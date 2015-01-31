@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe ApiMonitor do
   before(:each) do
-    ENV['API_MONITOR_LAST_MAX'] = '8863'
+    ApiMonitor.create(hn_id: 8863)
   end
 
   context 'with no new items' do
@@ -32,7 +32,7 @@ describe ApiMonitor do
   context 'with new items available' do
     let(:items) { ApiMonitor.new_stories }  
     before(:each) do
-      ENV['API_MONITOR_LAST_MAX'] = '8863'
+      ApiMonitor.create(hn_id: 8863)
       allow(ApiMonitor.client).to receive(:max_item).and_return('8867')
       story = instance_double(Story)
       allow(Story).to receive(:create).and_return(story)
@@ -76,10 +76,5 @@ describe ApiMonitor do
     it { expect(ApiMonitor.last_max).to eq 8863 }
   end
 
-  describe '.last_max=' do
-    it 'sets the last_max' do
-      expect{ ApiMonitor.last_max = '1234'}.to change {ApiMonitor.last_max}.from(8863).to(1234)
-    end
-  end
 end
 
