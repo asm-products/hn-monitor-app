@@ -1,0 +1,49 @@
+/* Custom base theme for HackerNews Monitor, made for Boostrap 3. */
+
+$almost-white: #fbfbfb;
+$hn-orange: #ff8033;
+
+body {
+  background: $hn-orange image-url("bg-pattern.png");
+}
+
+nav.navbar.navbar-default {
+  background-color: transparent;
+  border: none;
+  margin-top: 1rem;
+
+  .navbar-toggle {
+    border: solid 1px transparent;
+
+    &:hover, &:focus {
+      border: solid 1px $almost-white;
+      background: transparent;
+      .icon-bar {
+        background-color: #ffffff;
+      }
+    }
+
+    .icon-bar {
+      background-color: $almost-white;
+    }
+  }
+
+  .navbar-brand,
+  .navbar-nav > li > a
+  {
+    color: $almost-white;
+  }
+
+  .navbar-nav > li > a {
+    margin-left: 1rem;
+
+    &.highlighted {
+      margin-top: 6px;
+      padding-top: 6px;
+      padding-bottom: 8px;
+      border: solid 2px #ffffff;
+      border-radius: 3px;
+    }
+  }
+}
+

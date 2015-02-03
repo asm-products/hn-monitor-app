@@ -26,7 +26,7 @@ If you on Mac then you application port will be bind to VirtualBox IP, you can f
 To run rake/rails tasks: `fig run web bundle exec rails g contoller Main` or `fig run web bundle exec rake routes`
 
 ####Tech Stack:
-- Ruby version 2.1.2
+- Ruby version 2.1.5
 - Rails version 4.1.6
 
 - Authentication:

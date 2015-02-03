@@ -10,12 +10,21 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
+// Vendor Styles
+// --------------
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jquery-ui";
+@import "bootstrap-tokenfield";
+@import "bootstrap-tokenfield/tokenfield-typeahead";
 
+// Application Styles
+// ------------------
 
-
+@import "theme";
+@import "pages";
+@import "landing";
