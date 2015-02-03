@@ -1,4 +1,4 @@
-class ApiMonitor
+class ApiMonitor < ActiveRecord::Base
   def self.fetch_stories
     stories = new_stories
     return false if stories.size == 0
@@ -11,7 +11,6 @@ class ApiMonitor
       response = client.get_item(item)
       response if response.type == 'story'
     end.compact
-    self.last_max= @@max
     stories
   end
 
@@ -30,17 +29,11 @@ class ApiMonitor
   end
 
   def self.max
-    @@max = client.max_item.to_i
+    ApiMonitor.create(hn_id: client.max_item.to_i).hn_id
   end
 
   def self.last_max
-    return ENV['API_MONITOR_LAST_MAX'].to_i unless ENV['API_MONITOR_LAST_MAX'].nil?
-    ENV['API_MONITOR_LAST_MAX'] = client.max_item
-    ENV['API_MONITOR_LAST_MAX'].to_i
-  end
-
-  def self.last_max= new_value
-    ENV['API_MONITOR_LAST_MAX'] = new_value.to_s
-    return
+    return ApiMonitor.order(hn_id: :desc).limit(1).first.hn_id unless ApiMonitor.count == 0
+    max
   end
 end
