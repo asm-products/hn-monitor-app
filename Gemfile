@@ -17,6 +17,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'autoprefixer-rails'
 
+
 # Bundler >= 1.7.0 is required for rails-assets.
 gem 'bundler', '>= 1.7.0'
 source 'https://rails-assets.org' do
@@ -26,16 +27,14 @@ end
 
 gem 'sidekiq'
 
-gem 'whenever', require: false
 
-gem 'hackernews_ruby'
+gem 'hackernews_ruby', :git => 'https://github.com/allcentury/hackernews_ruby'
 
 # Authentication
 gem 'devise'
 
 # Server
 gem 'puma'
-
 
 
 group :development, :test do
@@ -49,6 +48,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'shoulda-matchers', require: false
+  #gem 'faker'
 end
 
 group :production do
